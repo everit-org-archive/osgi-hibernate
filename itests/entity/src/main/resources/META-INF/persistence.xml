@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (c) 2011, Everit Kft.
+
+    All rights reserved.
+
+    This library is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Lesser General Public
+    License as published by the Free Software Foundation; either
+    version 3 of the License, or (at your option) any later version.
+
+    This library is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public
+    License along with this library; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+    MA 02110-1301  USA
+
+-->
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="org.everit.main.pu"
+		transaction-type="JTA">
+ 		<jta-data-source>osgi:service/javax.sql.DataSource/(osgi.jndi.service.name=jdbc/hibernatetestsdb)</jta-data-source>
+		<class>org.everit.osgi.hibernate.itests.entity.CarEntity</class>
+		<properties>
+			<!-- <property name="hibernate.ejb.cfgfile" value="/hibernate.cfg.xml"/> -->
+
+			<property name="hibernate.show_sql" value="true" />
+
+			<!-- If metadata defaults is true Hibernate wants to get a connection 
+				when entityManager is created. Aries JPA does not work in this case as it 
+				starts the entitymanager when the bundle is in RESOLVED state and BundleContext 
+				is not available at that time. -->
+			<property name="hibernate.temp.use_jdbc_metadata_defaults"
+				value="false" />
+
+			<property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" />
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+
+			<!-- <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
+			<property name="javax.persistence.jdbc.user" value="sa" />
+			<property name="javax.persistence.jdbc.password" value="sa" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:test" />-->
+		</properties>
+	</persistence-unit>
+</persistence>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (c) 2011, Everit Kft.
+
+    All rights reserved.
+
+    This library is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Lesser General Public
+    License as published by the Free Software Foundation; either
+    version 3 of the License, or (at your option) any later version.
+
+    This library is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public
+    License along with this library; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+    MA 02110-1301  USA
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.everit</groupId>
+        <artifactId>main</artifactId>
+        <version>4-SNAPSHOT</version>
+    </parent>
+
+    <groupId>org.everit.osgi</groupId>
+    <artifactId>hibernate</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Hibernate OSGi Support</name>
+    <description>A solution to be able to run Hibernate based JPA applications in OSGi containers</description>
+
+    <properties>
+        <org.hibernate.core.version>4.1.8.Final</org.hibernate.core.version>
+        <org.hibernate.entitymanager.version>4.1.8.Final</org.hibernate.entitymanager.version>
+        <org.hibernate.commons.annotation.version>4.0.1.Final</org.hibernate.commons.annotation.version>
+    </properties>
+
+    <scm>
+        <connection>scm:git:git://github.com/everit-org/osgi-hibernate.git</connection>
+        <developerConnection>scm:git:https://github.com/everit-org/osgi-hibernate.git</developerConnection>
+        <url>https://github.com/everit-org/osgi-util</url>
+    </scm>
+    <url>${everit.public.site.url}/osgi-hibernate</url>
+    <distributionManagement>
+        <site>
+            <id>everit.org</id>
+            <url>dav:${everit.public.site.url}/osgi-hibernate</url>
+        </site>
+    </distributionManagement>
+    <ciManagement>
+        <system>Jenkins</system>
+        <url>https://ci.everit.biz/jenkins/job/osgi-hibernate</url>
+    </ciManagement>
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/everit-org/osgi-hibernate/issues</url>
+    </issueManagement>
+
+    <modules>
+        <module>bundle</module>
+        <module>adapter</module>
+        <module>itests</module>
+    </modules>
+
+    <repositories>
+        <repository>
+            <id>everit.groups.public</id>
+            <name>Everit Public Repository Group</name>
+            <url>http://repository.everit.biz/nexus/content/groups/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>everit.groups.proxy</id>
+            <name>Everit Proxy Repository Group</name>
+            <url>http://repository.everit.biz/nexus/content/groups/proxy</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+</project>
