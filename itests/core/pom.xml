@@ -154,6 +154,11 @@
             <version>1.0.1</version>
         </dependency>
         <dependency>
+            <groupId>org.everit.osgi.jpa</groupId>
+            <artifactId>org.everit.osgi.jpa.container</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
             <groupId>org.apache.aries.jpa</groupId>
             <artifactId>org.apache.aries.jpa.blueprint.aries</artifactId>
             <version>1.0.1</version>
