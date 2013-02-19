@@ -28,8 +28,8 @@
 
     <parent>
         <groupId>org.everit</groupId>
-        <artifactId>main</artifactId>
-        <version>4-SNAPSHOT</version>
+        <artifactId>oss</artifactId>
+        <version>4</version>
     </parent>
 
     <groupId>org.everit.osgi</groupId>
