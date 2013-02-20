@@ -29,7 +29,7 @@
     <parent>
         <groupId>org.everit.osgi.hibernate</groupId>
         <artifactId>itests</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
 
     <groupId>org.everit.osgi.hibernate.itests</groupId>
@@ -55,7 +55,7 @@
             <plugin>
                 <groupId>org.everit.osgi.dev</groupId>
                 <artifactId>eosgi-maven-plugin</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <version>1.0.0</version>
                 <executions>
                     <execution>
                         <id>integration-test</id>
@@ -146,7 +146,7 @@
         <dependency>
             <groupId>org.everit.osgi.hibernate</groupId>
             <artifactId>org.everit.osgi.hibernate.adapter</artifactId>
-            <version>1.0.0-SNAPSHOT</version>            
+            <version>${project.version}</version>            
         </dependency>
         <dependency>
             <groupId>org.apache.aries.jpa</groupId>
@@ -156,7 +156,7 @@
         <dependency>
             <groupId>org.everit.osgi.jpa</groupId>
             <artifactId>org.everit.osgi.jpa.container</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.jpa</groupId>
@@ -166,7 +166,7 @@
         <dependency>
             <groupId>org.everit.osgi.jdbc</groupId>
             <artifactId>org.everit.osgi.jdbc.h2</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
